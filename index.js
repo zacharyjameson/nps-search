@@ -56,8 +56,9 @@ function watchForm() {
   $("form").submit((event) => {
     event.preventDefault();
     const stateSearch = $("#js-statecode").val();
-    const maxResults = $("#js-max-results").val();
+    const maxResults = [$("#js-max-results").val()];
     getParks(stateSearch, maxResults);
+    console.log(stateSearch);
   });
 }
 
