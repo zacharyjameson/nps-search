@@ -16,11 +16,12 @@ function displayResults(responseJson){
     for(let i = 0; i < responseJson.data.length; i++){
         $('#results-list').append(
             `<li class="park-list">
-            <h3 class="park-names">${responseJson.data[i].fullName}</h3>
-            <a href="${responseJson.data[i].url}">Visit ${responseJson.data[i].fullName}'s Website</a>
+            <p>${responseJson.data[i].url}<p>
+            <a href="${responseJson.data[i].url}">
+            <h3 class="park-names">${responseJson.data[i].fullName}</h3></a>
             <p>${responseJson.data[i].description}</p>
-            </li>
-            <br>`
+            <br>
+            </li>`
     )};
 
     $('#results').removeClass('hidden');
