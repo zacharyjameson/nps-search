@@ -3,7 +3,7 @@
   }
   
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace;
   }
   
   button, input[type="text"] {
@@ -25,4 +25,16 @@
   
   .hidden {
     display: none;
+  }
+
+  h1, h3 {
+      text-align: center;
+  }
+
+  .park-names {
+      text-align: left;
+  }
+
+  .park-list {
+      list-style: none;
   }

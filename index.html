@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YouTube video finder</title>
+    <title>National Park Service Finder</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>National Park Service API Search</h1>
-
         <form id="js-form">
-            <label for="js-parkcode">Search term</label>
-            <input type="text" name="park-search-term" id="js-parkcode" required>
-
             <label for="js-statecode">State Code</label>
-            <input type="text" name="state-search-term" id="js-statecode" required>
-
+            <input type="text" name="state-search-term" id="js-statecode" placeholder="CA, WA, OR, etc." required>
+            <br>
             <label for="js-max-results">Maximum results</label>
             <input type="number" name="max-results" id="js-max-results" value="10">
 
