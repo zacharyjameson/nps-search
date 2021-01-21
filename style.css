@@ -38,3 +38,12 @@
   .park-list {
       list-style: none;
   }
+
+  .address {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.parkURL { 
+    font-size: 12px;
+}

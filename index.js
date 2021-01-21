@@ -16,10 +16,17 @@ function displayResults(responseJson){
     for(let i = 0; i < responseJson.data.length; i++){
         $('#results-list').append(
             `<li class="park-list">
-            <p>${responseJson.data[i].url}<p>
+            <p class="parkURL">${responseJson.data[i].url}<p>
             <a href="${responseJson.data[i].url}">
             <h3 class="park-names">${responseJson.data[i].fullName}</h3></a>
             <p>${responseJson.data[i].description}</p>
+            <div class="address">
+            <p>Physical Address:</p>
+            <p>${responseJson.data[i].addresses[0].line1}</p>
+            <p>${responseJson.data[i].addresses[0].line2}</p>
+            <p>${responseJson.data[i].addresses[0].line3}</p>
+            <p>${responseJson.data[i].addresses[0].city}, ${responseJson.data[i].addresses[1].stateCode} ${responseJson.data[i].addresses[1].postalCode}</p>
+            </div>
             <br>
             </li>`
     )};
@@ -58,7 +65,6 @@ function watchForm() {
     const stateSearch = $("#js-statecode").val();
     const maxResults = [$("#js-max-results").val()];
     getParks(stateSearch, maxResults);
-    console.log(stateSearch);
   });
 }
 
